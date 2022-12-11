@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 20px;
+  font-family: RampartOne;
+  font-weight: normal;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  /* align-content: center; */
+  background: linear-gradient(rgb(22, 22, 22), rgb(50, 50, 50));
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(100, 82, 224, 0.9), -2px -2px 5px rgba(140, 50, 224, 0.9);
+  align-items: center;
+  /* background: rgb(238, 238, 238); */
+}
+
+.boxInput {
+  margin-top: 50px;
+  width: 80%;
+  position: relative;
+  color: #fff;
+}
+
+.boxInput .input {
+  width: 100%;
+  height: 50px;
+  font-size: 1.4em;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  font-family: Roboto;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.boxInput label {
+  position: absolute;
+  bottom: 10px;
+  /* top: -15px; */
+  font-family: Roboto;
+  transition: .5s;
+}
+
+label.active {
+  /* top: -15px; */
+  transform: translateY(-35px);
+  font-size: .8em;
+}
+
+.boxInput:nth-child(3) {
+  margin-top: 80px;
+}
+
+.btn {
+  margin-top: 65px;
+  width: 60%;
+  height: 60px;
+  border: none;
+  border-radius: 50px;
+  font-family: Roboto;
+  font-size: 1.2em;
+  background-color: rgb(100, 82, 224);
+  color: #fff;
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    width: 90vw;
+  }
+
+  .boxInput .input {
+    font-size: 1em;
+  }
+}

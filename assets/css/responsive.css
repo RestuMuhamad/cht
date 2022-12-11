@@ -1,0 +1,125 @@
+@media screen and (max-width: 995px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 60px 55px auto;
+    grid-template-columns: 40% auto;
+  }
+
+  .fotoProfile {
+    width: 45px;
+    height: 45px;
+  }
+
+  .namaProfile {
+    margin-bottom: 3px;
+  }
+
+  .fungsi {
+    font-size: 1.2em;
+  }
+
+  .mainCht {
+    grid-template-rows: auto 65px;
+  }
+
+  .mainCht .chating {
+    padding: 10px 15px;
+  }
+
+  .boxType .type {
+    font-size: .85em;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      'search'
+      'listCht';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 100%;
+    background-color: lightblue;
+    box-shadow: none;
+    overflow-x: hidden;
+  }
+
+  .fungsi {
+    margin-left: 2px;
+  }
+
+  .profile {
+    grid-area: search;
+  }
+
+  .profileCht {
+    grid-area: search;
+    position: relative;
+    z-index: 2;
+    padding: var(--pdVertical) 0;
+  }
+
+  .profileCht .namaProfile {
+    font-size: 1em;
+  }
+
+  .profileCht .fungsi i {
+    font-size: .9em;
+  }
+
+  .profileCht .boxFungsi:nth-child(1) {
+    visibility: visible;
+    position: relative;
+  }
+
+  .profileCht .boxFungsi:nth-child(3) {
+    margin-right: 5px;
+  }
+
+  .mainCht {
+    grid-area: listCht;
+    position: relative;
+    /* z-index: 3; */
+  }
+
+  .search {
+    position: relative;
+    z-index: 3;
+    visibility: visible;
+  }
+
+  .search.active {
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .chating .content {
+    max-width: 75%;
+  }
+
+  .search .fungsi {
+    position: relative;
+    visibility: visible;
+  }
+
+  .listCht {
+    position: relative;
+    z-index: 2;
+    visibility: visible;
+  }
+
+  .listCht.active {
+    transform: translateX(200px);
+    opacity: 0;
+    z-index: 1;
+    transition: .3s;
+    visibility: hidden;
+  }
+}
